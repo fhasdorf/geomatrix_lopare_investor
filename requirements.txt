@@ -1,0 +1,11 @@
+streamlit>=1.43
+folium>=0.17
+streamlit-folium>=0.22
+streamlit-echarts>=0.4
+pyecharts>=2.0
+pandas>=2.0
+geopandas>=0.14
+pyarrow>=15.0
+pyjwt>=2.8
+
+-e .

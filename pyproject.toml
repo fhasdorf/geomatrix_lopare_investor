@@ -1,0 +1,15 @@
+[project]
+name = "geomatrix-lopare-investor"
+version = "0.0.1"
+description = "Lopare Project — Investor-facing Streamlit app (teaser + pitch companion)"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{ name = "Frank Hasdorf", email = "frank@geomatrix.consulting" }]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
