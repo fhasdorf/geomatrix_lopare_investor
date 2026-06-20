@@ -29,3 +29,16 @@ lead_log.jsonl
 
 # Notebooks scratch
 *.ipynb_checkpoints/
+
+# === HARD GUARDS für DD-Daten ===
+# Diese Pfade dürfen NIE im Investor-Repo committet werden.
+# Roh-Assays, Per-Hole-Stats, echte Hole-IDs leben ausschließlich im DD-Repo.
+data/*.parquet
+data/*.xlsx
+data/*.xls
+data/*.csv
+data/*.pdf
+!data/public/
+
+# Allerdings sollen Files unter data/public/ committet werden (Phase 1B).
+# Die werden durch den ! oben positiv erlaubt.
