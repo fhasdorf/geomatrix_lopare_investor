@@ -7,5 +7,6 @@ pandas>=2.0
 geopandas>=0.14
 pyarrow>=15.0
 pyjwt>=2.8
+pytest>=8.0
 
 -e .
