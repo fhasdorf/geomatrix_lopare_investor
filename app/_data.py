@@ -9,7 +9,10 @@ import geopandas as gpd
 import pandas as pd
 import streamlit as st
 
+from app._i18n import get_lang
+
 DATA_DIR = Path(__file__).parent.parent / "data" / "public"
+CONTENT_DIR = Path(__file__).parent.parent / "content"
 
 
 @st.cache_data
@@ -62,3 +65,22 @@ def get_concession_area_km2() -> float:
     """Reads 'area_km2_native' property from the GeoJSON feature."""
     gj = load_concession_geojson()
     return float(gj["features"][0]["properties"].get("area_km2_native", 87.7))
+
+
+# ---- Language-dependent content loaders ----
+
+@st.cache_data
+def _load_content_file(name: str, lang: str) -> str:
+    """Generic markdown content loader by name and language."""
+    path = CONTENT_DIR / f"{name}_{lang}.md"
+    return path.read_text(encoding="utf-8")
+
+
+def load_opportunity() -> str:
+    """Loads opportunity content in the currently active language."""
+    return _load_content_file("opportunity", get_lang())
+
+
+def load_disclaimer() -> str:
+    """Loads disclaimer content in the currently active language."""
+    return _load_content_file("disclaimer", get_lang())

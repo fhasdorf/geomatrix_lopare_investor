@@ -1,17 +1,15 @@
-"""Public — Opportunity / Story. Phase 0 placeholder."""
-
-from pathlib import Path
+"""Public — Opportunity / Story. Phase 3: sprachabhängiger Story-Content."""
 
 import streamlit as st
 
+from app._data import load_opportunity
+from app._i18n import init_lang, render_lang_toggle
 from app._theme import inject_theme
 
 st.set_page_config(page_title="Opportunity — Lopare", layout="wide")
 inject_theme()
+init_lang()
+render_lang_toggle()
 
-content_path = Path(__file__).parents[2] / "content" / "opportunity_en.md"
-if content_path.exists():
-    st.markdown(content_path.read_text(encoding="utf-8"))
-else:
-    st.title("Opportunity")
-    st.info("Story content coming in Phase 3.")
+content = load_opportunity()
+st.markdown(content)

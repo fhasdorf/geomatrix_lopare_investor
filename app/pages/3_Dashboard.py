@@ -3,10 +3,13 @@
 import streamlit as st
 
 from app._access import require_access
+from app._i18n import init_lang, render_lang_toggle
 from app._theme import inject_theme
 
 st.set_page_config(page_title="Dashboard — Lopare", layout="wide")
 inject_theme()
+init_lang()
+render_lang_toggle()
 require_access()  # Phase 4 enforces real gate
 
 st.title("Investor Dashboard")

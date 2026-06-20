@@ -7,6 +7,7 @@ from app._data import (
     get_concession_area_km2,
     get_total_holes,
 )
+from app._i18n import init_lang, render_lang_toggle
 from app._theme import inject_theme
 
 st.set_page_config(
@@ -17,6 +18,8 @@ st.set_page_config(
 )
 
 inject_theme()
+init_lang()
+render_lang_toggle()
 
 # Hero
 st.markdown(

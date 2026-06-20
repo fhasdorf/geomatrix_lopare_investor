@@ -4,11 +4,14 @@ import streamlit as st
 from streamlit_folium import st_folium
 
 from app._data import load_collars, get_concession_area_km2
+from app._i18n import init_lang, render_lang_toggle
 from app._map_helpers import build_map, render_legend
 from app._theme import inject_theme
 
 st.set_page_config(page_title="Project Map — Lopare", layout="wide")
 inject_theme()
+init_lang()
+render_lang_toggle()
 
 # Sidebar controls
 with st.sidebar:
