@@ -19,8 +19,17 @@ st.set_page_config(
 inject_theme()
 
 # Hero
-st.markdown("# Lopare")
-st.markdown("### Strategic Lithium & Boron Project in the EU's Doorstep")
+st.markdown(
+    '<h1 style="margin-bottom:0.1em;font-size:3.5rem">Lopare</h1>',
+    unsafe_allow_html=True,
+)
+st.markdown(
+    '<div style="font-family:\'Space Grotesk\',sans-serif;font-size:1.35rem;'
+    'font-weight:500;color:#3DD9D6;letter-spacing:-0.01em;margin-bottom:0.8rem">'
+    "Strategic Lithium & Boron Project in the EU's Doorstep"
+    "</div>",
+    unsafe_allow_html=True,
+)
 
 # Pull aggregates once
 total_holes = get_total_holes()
@@ -75,16 +84,21 @@ cat_data = [
     ("Pending",     li_pending,     "#FFFFFF"),
 ]
 
-bar_html = '<div style="display:flex;height:32px;border-radius:4px;overflow:hidden;margin:8px 0">'
+bar_html = (
+    '<div style="display:flex;height:36px;border-radius:8px;overflow:hidden;'
+    'margin:12px 0;border:1px solid rgba(61,217,214,0.2);'
+    'box-shadow:0 2px 12px rgba(0,0,0,0.15)">'
+)
 for label, count, color in cat_data:
     if count == 0:
         continue
     pct = count / total_holes * 100
-    border = "border:1px solid #3DD9D6;" if label == "Pending" else ""
+    border = "border-left:1px solid rgba(61,217,214,0.3);" if label == "Pending" else ""
     bar_html += (
         f'<div style="flex:{count};background:{color};{border}'
         f'display:flex;align-items:center;justify-content:center;'
-        f'color:#0A1628;font-weight:600;font-size:12px" '
+        f'color:#0A1628;font-weight:600;font-size:12px;'
+        f'font-family:\'Space Grotesk\',sans-serif" '
         f'title="{label}: {count} holes ({pct:.0f}%)">'
         f'{count if pct >= 8 else ""}</div>'
     )
