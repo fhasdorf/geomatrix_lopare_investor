@@ -1,0 +1,37 @@
+{
+  "lopare_lce_mt": 1.83,
+  "lopare_lce_calculation_note": "1,286 Mt × 574 ppm Li2O × 2.473 LCE conversion factor",
+  "eu_demand_2030_lce_kt_per_year": 58,
+  "eu_demand_2030_source": "European Commission CRMA Factsheet: Lithium",
+  "eu_current_extraction_lce_kt_per_year": 1,
+  "eu_current_extraction_note": "Limited Portugal/Finland production; Keliber & Barroso scaling 2025-2027",
+  "crma_extraction_target_pct": 10,
+  "crma_processing_target_pct": 40,
+  "crma_recycling_target_pct": 25,
+  "crma_max_single_country_pct": 65,
+  "eu_boron_import_dependency_pct": 99,
+  "eu_boron_dependency_source": "EU dependency on Türkiye (Eti Maden) for boron",
+  "snapshot_date": "2026-06-20",
+  "sources": [
+    {
+      "label": "European Commission — CRMA Factsheet: Lithium",
+      "url": "https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials/critical-raw-materials-act_en"
+    },
+    {
+      "label": "Regulation (EU) 2024/1252 (CRMA)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1252/oj"
+    },
+    {
+      "label": "USGS Mineral Commodity Summaries 2025 — Boron",
+      "url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-boron.pdf"
+    },
+    {
+      "label": "Trading Economics — Lithium Carbonate Spot",
+      "url": "https://tradingeconomics.com/commodity/lithium"
+    },
+    {
+      "label": "Intratec — Lithium Carbonate Price Outlook",
+      "url": "https://www.intratec.us/solutions/primary-commodity-prices/commodity/lithium-carbonate-prices"
+    }
+  ]
+}

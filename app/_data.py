@@ -84,3 +84,33 @@ def load_opportunity() -> str:
 def load_disclaimer() -> str:
     """Loads disclaimer content in the currently active language."""
     return _load_content_file("disclaimer", get_lang())
+
+
+# ---- Market data loaders ----
+
+@st.cache_data
+def load_market_lithium() -> pd.DataFrame:
+    return pd.read_csv(DATA_DIR / "market_lithium.csv")
+
+
+@st.cache_data
+def load_market_boron() -> pd.DataFrame:
+    return pd.read_csv(DATA_DIR / "market_boron.csv")
+
+
+@st.cache_data
+def load_eu_context() -> dict:
+    with open(DATA_DIR / "market_eu_context.json", encoding="utf-8") as f:
+        return json.load(f)
+
+
+# Resource-Snapshot-Konstanten (aus MRE-Report, hardcoded für Dashboard-KPIs)
+RESOURCE_SNAPSHOT = {
+    "total_mt": 1286,
+    "avg_li2o_ppm": 574,
+    "avg_b2o3_pct": 0.75,
+    "concession_km2": 87.7,
+    "boron_subtotal_mt": 1.3,
+    "boron_subtotal_grade_pct": 5.61,
+    "source": "CSA Global R268.2022 (30 July 2022)",
+}
