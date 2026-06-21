@@ -92,11 +92,6 @@ consulting group with a 35-year track record in mineral resource reporting.
 Technical realisation of this investor presentation is provided by Geomatrix
 Consulting; capital markets advisory is provided by Seaside Capital Markets.
 
-## 7. Get in Touch
-
-For access to the data room, the full CSA Global report, or to discuss the
-investment opportunity, please use the [Contact](Contact) page.
-
 ---
 
 *This page contains forward-looking statements and is subject to the

@@ -98,11 +98,6 @@ Berichterstattung.
 Technische Realisierung dieser Investoren-Präsentation: Geomatrix Consulting.
 Kapitalmarkt-Beratung: Seaside Capital Markets.
 
-## 7. Kontakt aufnehmen
-
-Für Zugang zum Datenraum, dem vollständigen CSA-Global-Bericht oder für ein
-Investitionsgespräch nutzen Sie bitte die [Kontakt](Contact)-Seite.
-
 ---
 
 *Diese Seite enthält zukunftsgerichtete Aussagen und unterliegt dem
