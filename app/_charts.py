@@ -88,7 +88,7 @@ def chart_program_overview() -> dict:
             "textStyle": {"color": THEME["text_secondary"]},
             "bottom": 0,
         },
-        "grid": {"left": "5%", "right": "5%", "top": "15%", "bottom": "15%", "containLabel": True},
+        "grid": {"left": "5%", "right": "5%", "top": "18%", "bottom": "22%", "containLabel": True},
         "xAxis": {
             "type": "category",
             "data": pivot.index.tolist(),
@@ -121,29 +121,40 @@ def chart_li_category_pie() -> dict:
 
     return {
         **_base_options(),
-        "title": {
+            "title": {
             "text": "Drill holes by lithium best-intercept category",
             "left": "left",
+            "top": "5",
             "textStyle": {"color": THEME["text_primary"], "fontSize": 14, "fontWeight": "normal"},
         },
+
         "legend": {
             "orient": "vertical",
             "right": 10,
             "top": "center",
             "textStyle": {"color": THEME["text_secondary"]},
         },
+
         "series": [{
             "name": "Category",
             "type": "pie",
-            "radius": ["45%", "70%"],
-            "center": ["35%", "55%"],
+            "radius": ["50%", "72%"],
+            "center": ["38%", "55%"],
             "data": data,
+            "avoidLabelOverlap": True,
             "label": {
-                "color": THEME["text_secondary"],
-                "formatter": "{b}: {c} ({d}%)",
-            },
-            "labelLine": {"lineStyle": {"color": THEME["text_tertiary"]}},
-        }],
+            "show": True,
+            "position": "inside",
+            "color": "#0A1628",
+            "formatter": "{c}",
+            "fontSize": 12,
+            "fontWeight": "bold",
+        },
+    "labelLine": {"show": False},
+        "emphasis": {
+            "label": {"show": True, "fontSize": 14, "fontWeight": "bold"},
+        },
+}],
     }
 
 

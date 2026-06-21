@@ -45,9 +45,9 @@ st.divider()
 st.markdown("## Drill program structure")
 col1, col2 = st.columns([3, 2])
 with col1:
-    st_echarts(options=chart_program_overview(), height="380px")
+    st_echarts(options=chart_program_overview(), height="420px")
 with col2:
-    st_echarts(options=chart_li_category_pie(), height="380px")
+    st_echarts(options=chart_li_category_pie(), height="420px")
 
 st.caption(
     "Categories reflect the highest single-sample assay grade observed within "
